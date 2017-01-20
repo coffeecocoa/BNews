@@ -1,5 +1,5 @@
 
-todo = 
+Todo :
   1. beter vote
   2. comment
   3. increasing authentication security
