@@ -1,8 +1,9 @@
+to run app -> shotgun
 
 Todo :
-  1. beter vote
-  2. comment
+  1. need beter vote
+  2. implementing comment
   3. increasing authentication security
-  4. another user info
+  4. public user info
 
-to run app -> shotgun
+
