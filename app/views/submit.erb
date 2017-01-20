@@ -1,0 +1,18 @@
+<div class="container">
+	<form action='/submit' method='POST'>
+		<div class="form-group">
+	      <label for="title">Title:</label>
+	      <input type='text' name='form[title]' class="form-control" placeholder="title">
+	    </div>
+	    <div class="form-group">
+	      <label for="url">Url:</label>
+	      <input type='url' name='form[url]' class="form-control" placeholder="url">
+	    </div>
+	      <h4>or</h4>
+	    <div class="form-group">
+	      <label for="text">Text:</label>
+	      <textarea name='form[text]' class="form-control"></textarea>
+	    </div>
+	      <input class="btn btn-primary" type="submit" value="Submit">
+	</form>
+</div>

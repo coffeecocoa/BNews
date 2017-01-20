@@ -1,0 +1,25 @@
+<h4>Name : <%= current_user.username %></h4>
+<hr>
+<h4>Submit news</h4>
+<ol class="list-group">
+	<% current_user.posts.each do |post| %>
+		<li class="list-group-item clearfix">
+	        <div class="post-header">
+	          <a href="<%= post.url%>"><%= post.title %></a>
+	          <span class="post-url">(<%= post.url%>)</span> <br>
+           
+	           <!-- <a href="/vote/<%= post.id %>" class="upvote">&uarr;</a>
+	           <a href="/downvote/<%= post.id %>" class="downvote">&darr;</a> -->
+	           <%= post.points %> points by 
+	          <span>
+		          <% if current_user.username %>
+			          you
+		          <% end %>
+	          </span> at 
+		      <span><%= post.created_at.strftime("%d %b %y") %> </span>
+	        </div>
+	        <h5><%= post.text %></h5>
+	   	</li>
+	<% end %>
+</ol>
+

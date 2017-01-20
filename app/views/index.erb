@@ -1,0 +1,31 @@
+<h3>Berita hari ini?</h3>
+
+<% if logged_in? %>
+  <h4>Hi, <%= current_user.username %> .. here is a your news today.</h4> 
+<% else %>
+  <h4><a href="/signup">Signup</a> or <a href="/login">Login</a> to create or edit your news.</h4>
+<% end %>
+
+<hr>
+
+<p>
+  <ol class="list-group">
+    <% @posts.each do |post| %>
+        <li class="list-group-item clearfix">
+          
+          <div class="post-header">
+          <a href="<%= post.url%>"><%= post.title %></a>
+          <span class="post-url">(<%= post.url%>)</span> <br>
+           
+           <a href="/vote/<%= post.id %>" class="upvote">&uarr;</a>
+           <a href="/downvote/<%= post.id %>" class="downvote">&darr;</a>
+           <%= post.points %> points by 
+            <span><%= post.user.username %></span> at 
+            <span><%= post.created_at.strftime("%d %b %y") %> </span>
+          <h5><%= post.text %></h5>
+          </div>
+
+        </li>
+    <% end %>
+  </ol>
+</p>
