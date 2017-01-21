@@ -1,4 +1,6 @@
-to run app -> shotgun
+to run app :
+   1. rake db:migrate
+   2. shotgun
 
 Todo :
   1. need beter vote
